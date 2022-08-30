@@ -8,7 +8,7 @@ const initialState = {
 };
 
 // fetchRelatedPost async thunk function
-const fetchRelatedPost = createAsyncThunk("post/postFetch", async (payload) => {
+const fetchRelatedPost = createAsyncThunk("post/relatedPostFetch", async (payload) => {
   const queryParameters = payload.title.split(" ")
     .map((item) => `title_like=${item}`)
     .join("&");

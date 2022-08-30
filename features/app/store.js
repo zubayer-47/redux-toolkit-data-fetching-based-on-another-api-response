@@ -12,7 +12,7 @@ const store = configureStore({
   },
   middleware: (getDefaultMiddleware) =>
     getDefaultMiddleware().concat(logger,(store) => (next) => (action) => {
-      console.log(fetchPost.fulfilled.type);
+      // console.log(fetchPost.fulfilled.type);
       if (action.type === fetchPost.fulfilled.type) {
         store.dispatch(fetchRelatedPost(action.payload));
         return next(action);
